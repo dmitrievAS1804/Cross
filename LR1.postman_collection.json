@@ -1,0 +1,196 @@
+{
+	"info": {
+		"_postman_id": "5bbad208-137c-4761-ae3c-edc0c4564551",
+		"name": "LR1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Все школы",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW5AZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiYWRtaW4iLCJuYmYiOjE2MTcxODMxNTgsImV4cCI6MTYxNzE4MzIxOCwiaXNzIjoiTXlBdXRoU2VydmVyIiwiYXVkIjoiTXlBdXRoQ2xpZW50In0.7_oXIXuvPl_kKRwHv77OmRi4qIlio7sVeZdll4JmrzA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44329/api/Schools",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44329",
+					"path": [
+						"api",
+						"Schools"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Все ученики",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44329/api/Students",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44329",
+					"path": [
+						"api",
+						"Students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Все ученики одной Школы",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44329/api/Students/schools/Школа №1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44329",
+					"path": [
+						"api",
+						"Students",
+						"schools",
+						"Школа №1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Количество учеников",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44329/api/Schools/number/500",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44329",
+					"path": [
+						"api",
+						"Schools",
+						"number",
+						"500"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удалить школу",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44329/api/Schools/8",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44329",
+					"path": [
+						"api",
+						"Schools",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Новая школа",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW5AZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiYWRtaW4iLCJuYmYiOjE2MTcxODMxNTgsImV4cCI6MTYxNzE4MzIxOCwiaXNzIjoiTXlBdXRoU2VydmVyIiwiYXVkIjoiTXlBdXRoQ2xpZW50In0.7_oXIXuvPl_kKRwHv77OmRi4qIlio7sVeZdll4JmrzA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"name\": \"Школа №10\",\r\n        \"number_of_students\": 653,\r\n        \"address\": \"Ул. Центральаня\"\r\n   }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44329/api/Schools",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44329",
+					"path": [
+						"api",
+						"Schools"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Токен админа",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW5AZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiYWRtaW4iLCJuYmYiOjE2MTcxODI3NTIsImV4cCI6MTYxNzE4MjgxMiwiaXNzIjoiTXlBdXRoU2VydmVyIiwiYXVkIjoiTXlBdXRoQ2xpZW50In0.UgHoTCzVXb9YbYcVhdPIT4lMKCSV01n8i34q8maIQBo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44329/api/Account/token/admin@gmail.com/12345",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44329",
+					"path": [
+						"api",
+						"Account",
+						"token",
+						"admin@gmail.com",
+						"12345"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
