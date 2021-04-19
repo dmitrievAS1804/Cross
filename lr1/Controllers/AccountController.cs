@@ -20,8 +20,8 @@ namespace lr1.Controllers
             new Person { Login="qwerty@gmail.com", Password="55555", Role = "user" }
         };
 
-        [HttpPost("token/{username}/{password}")]
-        public IActionResult Token(string username, string password)
+        [HttpPost("token")]
+        public IActionResult Token([FromForm]string username,[FromForm] string password)
         {
             var identity = GetIdentity(username, password);
             if (identity == null)

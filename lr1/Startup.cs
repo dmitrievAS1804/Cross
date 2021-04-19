@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using lr1.Models;
+using lr1.Interfaces;
 
 namespace lr1
 {
@@ -50,7 +51,9 @@ namespace lr1
                                    };
                                });
 
-            services.AddControllers();
+            services.AddControllersWithViews();
+            services.AddDbContext<AllContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Context")));
+            services.AddScoped<IControl, Control>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
